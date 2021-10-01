@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/terraform
+module github.com/jhixson74/terraform-providers/terraform
 
 go 1.16
 

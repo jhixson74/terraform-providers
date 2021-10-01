@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/kubevirt
+module github.com/jhixson74/terraform-providers/kubevirt
 
 go 1.16
 

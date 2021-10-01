@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/random
+module github.com/jhixson74/terraform-providers/random
 
 go 1.16
 

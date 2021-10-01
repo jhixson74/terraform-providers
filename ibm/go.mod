@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/ibm
+module github.com/jhixson74/terraform-providers/ibm
 
 go 1.16
 

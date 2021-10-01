@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/azurestack
+module github.com/jhixson74/terraform-providers/azurestack
 
 go 1.16
 

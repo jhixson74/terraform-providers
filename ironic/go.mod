@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/ironic
+module github.com/jhixson74/terraform-providers/ironic
 
 go 1.16
 

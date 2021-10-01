@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/local
+module github.com/jhixson74/terraform-providers/local
 
 go 1.16
 

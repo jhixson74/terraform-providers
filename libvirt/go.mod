@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/libvirt
+module github.com/jhixson74/terraform-providers/libvirt
 
 go 1.16
 

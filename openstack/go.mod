@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/openstack
+module github.com/jhixson74/terraform-providers/openstack
 
 go 1.16
 

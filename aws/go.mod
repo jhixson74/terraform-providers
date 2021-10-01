@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/aws
+module github.com/jhixson74/terraform-providers/aws
 
 go 1.16
 

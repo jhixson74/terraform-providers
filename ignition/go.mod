@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/ignition
+module github.com/jhixson74/terraform-providers/ignition
 
 go 1.16
 

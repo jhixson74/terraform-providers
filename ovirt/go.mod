@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/ovirt
+module github.com/jhixson74/terraform-providers/ovirt
 
 go 1.16
 

@@ -1,4 +1,4 @@
-module github.com/jhixson74/build-terraform-plugins/vsphere
+module github.com/jhixson74/terraform-providers/vsphere
 
 go 1.16
 
