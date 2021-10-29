@@ -29,7 +29,7 @@ $(GO_BUILD_TARGETS)::
 .PHONY: go-clean
 go-clean: $(GO_CLEAN_TARGETS)
 $(GO_CLEAN_TARGETS)::
-	dir=$(subst go-clean.,,$@); cd $$dir && rm -rf vendor && rm -f terraform-provider-$$dir
+	dir=$(subst go-clean.,,$@); cd $$dir && rm -rf vendor && rm -f $(TFBINDIR)/terraform-provider-$$dir
 
 .PHONY: clean
 clean: go-clean go-clean-terraform
@@ -48,4 +48,4 @@ go-build-terraform::
 
 .PHONY: go-clean-terraform
 go-clean-terraform:
-	cd terraform && rm -rf vendor && rm -f terraform
+	cd terraform && rm -rf vendor && rm -f $(TFBINDIR)/terraform
