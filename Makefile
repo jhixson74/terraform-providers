@@ -6,7 +6,7 @@ GO_BUILD_TARGETS:=	$(foreach DIR,$(TFSUBDIRS), $(subst $(DIR),go-build.$(DIR),$(
 GO_CLEAN_TARGETS:=	$(foreach DIR,$(TFSUBDIRS), $(subst $(DIR),go-clean.$(DIR),$(DIR)))
 
 .PHONY: all
-all: go-mod-tidy-vendor go-mod-tidy-vendor-terraform go-build go-build-terraform
+all: go-build go-build-terraform
 
 .PHONY: go-mod-tidy-vendor
 go-mod-tidy-vendor: $(GO_MOD_TIDY_TARGETS)
@@ -15,7 +15,7 @@ $(GO_MOD_TIDY_TARGETS)::
 
 .PHONY: go-build
 go-build: $(GO_BUILD_TARGETS)
-$(GO_BUILD_TARGETS)::
+$(GO_BUILD_TARGETS):: go-mod-tidy-vendor
 	dir=$(subst go-build.,,$@); cd $$dir; \
 	path=`grep import $$dir.go|awk '{ print $$2 }'|sed 's|"||g'`; \
 	go build -o $(TFBINDIR)/terraform-provider-$$dir ./vendor/$$path; 
@@ -33,7 +33,7 @@ go-mod-tidy-vendor-terraform::
 	cd terraform && go mod tidy && go mod vendor
 
 .PHONY: go-build-terraform
-go-build-terraform::
+go-build-terraform:: go-mod-tidy-vendor-terraform
 	cd terraform && go build -o $(TFBINDIR)/terraform ./vendor/github.com/hashicorp/terraform
 
 .PHONY: go-clean-terraform
